@@ -18,4 +18,7 @@ class PostAdmin(admin.ModelAdmin):
     ]
     inlines = [UserInline]
     list_display = ('title', 'body', 'pub_date', 'likes', 'was_published_recently')
+    list_filter = ['pub_date']
+    search_fields = ['title']
+    date_hierarchy = 'pub_date'
 admin.site.register(Post, PostAdmin)
