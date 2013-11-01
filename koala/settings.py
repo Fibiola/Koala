@@ -108,10 +108,11 @@ ROOT_URLCONF = 'koala.urls'
 WSGI_APPLICATION = 'koala.wsgi.application'
 
 TEMPLATE_DIRS = (
+    '/Users/Fibiola/coding/projects/Koala/templates',
+)
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
