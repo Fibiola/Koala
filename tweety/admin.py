@@ -6,6 +6,6 @@ class PostAdmin(admin.ModelAdmin):
         (None,               {'fields': ['title']}),
         ('Content',          {'fields': ['body']}),
         ('Date information', {'fields': ['pub_date']}),
-        ('Popularity',      {'fields': ['likes']}),
+        ('Popularity',      {'fields': ['likes'], 'classes': ['collapse']}),
     ]
 admin.site.register(Post, PostAdmin)
