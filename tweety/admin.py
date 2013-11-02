@@ -22,3 +22,4 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ['title']
     date_hierarchy = 'pub_date'
 admin.site.register(Post, PostAdmin)
+
