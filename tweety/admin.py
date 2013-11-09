@@ -6,7 +6,6 @@ admin.site.register(User)
 
 class UserInline(admin.TabularInline):
     model = User
-    extra = 1
     
 
 class PostAdmin(admin.ModelAdmin):
@@ -14,10 +13,10 @@ class PostAdmin(admin.ModelAdmin):
         (None,               {'fields': ['title']}),
         ('Content',          {'fields': ['body']}),
         ('Date information', {'fields': ['pub_date']}),
+        ('Username',          {'fields': ['user']}),
         ('Popularity',      {'fields': ['likes'], 'classes': ['collapse']}),
     ]
-    inlines = [UserInline]
-    list_display = ('title', 'body', 'pub_date', 'likes', 'was_published_recently')
+    list_display = ('title', 'body', 'pub_date', 'likes', 'was_published_recently', 'user')
     list_filter = ['pub_date']
     search_fields = ['title']
     date_hierarchy = 'pub_date'
